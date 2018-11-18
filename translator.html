@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <form id="phrase">
+            <input id="phrase" name="phrase" type="text" placeholder="Enter Phrase:" required> 
+            <select id="language">
+                <option value="spanish">Spanish</option>
+                <option value="italian">Italian</option>
+                <option value="french">French</option>
+            </select>
+    </form>
+    <button onclick="submit()">Translate</button>
+    
+    <div id="response"></div>
+
+    
+
+    <script>
+
+    let spanish = {"hello": "hola", "goodbye": "adios", "how are you?": "¿como estas?", "i love": "me encanta", "my name is": "me llamo"};
+    let italian = {"hello": "ciao", "goodbye": "addio", "how are you?": "come va?", "i love": "io amo", "my name is": "mi chiamo"};
+    let french = {"hello": "bonjour", "goodbye": "au revoir", "how are you?": "comment vas-tu?", "i love": "j'aime", "my name is": "mon nom est"};
+
+    const phrase = document.getElementById('phrase');
+    const language = document.getElementById('language');
+    const response = document.getElementById('response');
+
+    function submit()
+    {      
+        if(phrase.value === "hello")
+        {
+            switch(language.value) {
+                case 'spanish': 
+                    response.innerHTML = spanish.hello;
+                    break;
+                case 'italian': 
+                    response.innerHTML = italian.hello;
+                    break;
+                case 'french': 
+                    response.innerHTML = french.hello;
+                    break;
+            }
+        }
+        else if(phrase.value === "goodbye")
+        {
+            switch(language.value) {
+                case 'spanish': 
+                    response.innerHTML = spanish.goodbye;
+                    break;
+                case 'italian': 
+                    response.innerHTML = italian.goodbye;
+                    break;
+                case 'french': 
+                    response.innerHTML = french.goodbye;
+                    break;
+            }
+        }
+        else if(phrase.value === "how are you?")
+        {
+            switch(language.value) {
+                case 'spanish': 
+                    response.innerHTML = spanish["how are you?"];
+                    break;
+                case 'italian': 
+                    response.innerHTML = italian["how are you?"];
+                    break;
+                case 'french': 
+                    response.innerHTML = french["how are you?"];
+                    break;
+            }
+        }
+        else if(phrase.value === "i love")
+        {
+            switch(language.value) {
+                case 'spanish': 
+                    response.innerHTML = spanish["i love"];
+                    break;
+                case 'italian': 
+                    response.innerHTML = italian["i love"];
+                    break;
+                case 'french': 
+                    response.innerHTML = french["i love"];
+                    break;
+            }
+        }
+        else if(phrase.value === "my name is")
+        {
+            switch(language.value) {
+                case 'spanish': 
+                    response.innerHTML = spanish["my name is"];
+                    break;
+                case 'italian': 
+                    response.innerHTML = italian["my name is"];
+                    break;
+                case 'french': 
+                    response.innerHTML = french["my name is"];
+                    break;
+            }
+        }
+    } 
+    </script>      
+</body>
+</html>
