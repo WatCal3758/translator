@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <form id="phrase">
+    <form id="phrases">
             <input id="phrase" name="phrase" type="text" placeholder="Enter Phrase:" required> 
             <select id="language">
                 <option value="spanish">Spanish</option>
@@ -27,7 +27,7 @@
 
     function submit()
     {      
-        if(phrase.value === "hello")
+        if(phrase.value.toLowerCase() === "hello")
         {
             switch(language.value) {
                 case 'spanish': 
